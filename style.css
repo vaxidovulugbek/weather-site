@@ -145,8 +145,13 @@
   background-color: #0000003a;
 }
 
-
-
+.linkk {
+  text-decoration: none;
+  color: #000;
+}
+.infolink {
+  margin-top: 20px !important;
+}
 
 
 
