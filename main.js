@@ -1,6 +1,3 @@
-// API_KEY = "33dedde6287575d237be2e1c44271762";
-
-
 
 let elvalue = document.querySelector("#search")
 let elform = document.querySelector("#form")
@@ -24,7 +21,6 @@ let elweatherIcon = document.querySelector("#weatherIcon")
 let elInfoImg = document.querySelector("#infoImg")
 let elBody = document.querySelector("#body")
 console.log(elweatherIcon.innerHTML);
-// elBody.style.backgroundImage = "url('https://media-cdn.tripadvisor.com/media/photo-s/15/a4/9b/77/legacy-hotel-at-img-academy.jpg')";
 
 fetch (`https://api.openweathermap.org/data/2.5/weather?q=toshkent&units=metric&appid=33dedde6287575d237be2e1c44271762`)
   .then((res) => res.json())
@@ -38,8 +34,6 @@ fetch (`https://api.openweathermap.org/data/2.5/weather?q=toshkent&units=metric&
     elCountry.textContent = `${birnimr.sys.country}`
     elWeath.textContent = `${birnimr.weather[0].main}`
     elDescw.textContent = `${birnimr.weather[0].description}`
-    // elSunrice.textContent = `${birnimr.sys.sunrise}`
-    // elSunset.textContent = `${birnimr.sys.sunset}`
     elHumiduty.textContent = `${birnimr.main.humidity}`
     elLatcoordinat.textContent = `${birnimr.coord.lat}`
     elLoncoordinat.textContent = `${birnimr.coord.lon}`
@@ -81,7 +75,6 @@ fetch (`https://api.openweathermap.org/data/2.5/weather?q=toshkent&units=metric&
 elform.addEventListener("submit",(e) => {
   e.preventDefault()
   let a = elvalue.value
-  // console.log(a);
   fetch (`https://api.openweathermap.org/data/2.5/weather?q=${a}&units=metric&appid=33dedde6287575d237be2e1c44271762`)
   .then((res) => res.json())
   .then((birnimr) => {
@@ -95,15 +88,11 @@ elform.addEventListener("submit",(e) => {
     elCountry.textContent = `${birnimr.sys.country}`
     elWeath.textContent = `${birnimr.weather[0].main}`
     elDescw.textContent = `${birnimr.weather[0].description}`
-    // elSunrice.textContent = `${birnimr.sys.sunrise}`
-    // elSunset.textContent = `${birnimr.sys.sunset}`
     elHumiduty.textContent = `${birnimr.main.humidity}`
     elLatcoordinat.textContent = `${birnimr.coord.lat}`
     elLoncoordinat.textContent = `${birnimr.coord.lon}`
     elSpeedw.textContent = `${birnimr.wind.speed}`
 
-
-    
     if (birnimr.weather[0].main == "Rain") {
       elBody.style.backgroundImage = "url('https://images.unsplash.com/photo-1530743373890-f3c506b0b5b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFpbiUyMGNsb3VkfGVufDB8fDB8fA%3D%3D&w=1000&q=80')";
       elInfoImg.style.backgroundImage = "url('https://cdn.worldweatheronline.com/images/weather/large/266_night_lg.png')";
@@ -149,6 +138,38 @@ elform.addEventListener("submit",(e) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // fetch (`https://api.openweathermap.org/data/2.5/weather?q=toshkent&units=metric&appid=33dedde6287575d237be2e1c44271762`)
 //   .then((res) => res.json())
 //   .then((birnimr) => {
@@ -175,27 +196,6 @@ elform.addEventListener("submit",(e) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// console.log(camelize("JavaScript Exercises"));
 
 
 
