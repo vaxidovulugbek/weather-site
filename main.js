@@ -57,6 +57,12 @@ fetch (`https://api.openweathermap.org/data/2.5/weather?q=toshkent&units=metric&
       elInfoImg.style.backgroundImage = "url('https://cdn.worldweatheronline.com/images/weather/large/122_day_lg.png')";
       elweatherIcon.innerHTML = `<i class='bx bx-cloud' ></i>`
     }
+    if (birnimr.weather[0].main == "Snow") {
+      console.log("qor");
+      elBody.style.backgroundImage = "url('https://www.highcountryweather.com/wp-content/uploads/2016/11/2016-november-03-how-snowy-1024x681.jpg')";
+      elInfoImg.style.backgroundImage = "url('https://w7.pngwing.com/pngs/553/202/png-transparent-cloud-weather-snowflake-symbol-snowflake-weather-symbol-blue-cloud-heart-thumbnail.png')";
+      elweatherIcon.innerHTML = `<i class='bx bx-cloud-snow'></i>`
+    }
     if (birnimr.weather[0].main == "Haze" || birnimr.weather[0].main == "Mist") {
       console.log("tuman");
       elBody.style.backgroundImage = "url('https://st2.depositphotos.com/1005011/7977/i/450/depositphotos_79770400-stock-photo-image-from-nature-series.jpg')";
@@ -117,6 +123,12 @@ elform.addEventListener("submit",(e) => {
       elBody.style.backgroundImage = "url('https://media.istockphoto.com/photos/blue-sky-with-bright-sun-and-clouds-picture-id1007768414?k=20&m=1007768414&s=612x612&w=0&h=tPqlkOIe3O1hM2pnYbZAJdwIXIpdpDddABPNdVTFOrs=')";
       elInfoImg.style.backgroundImage = "url('https://cdn.worldweatheronline.com/images/weather/small/113_day_sm.png')";
       elweatherIcon.innerHTML = `<i class='bx bx-cloud' ></i>`
+    }
+    if (birnimr.weather[0].main == "Snow") {
+      console.log("qor");
+      elBody.style.backgroundImage = "url('https://www.highcountryweather.com/wp-content/uploads/2016/11/2016-november-03-how-snowy-1024x681.jpg')";
+      elInfoImg.style.backgroundImage = "url('https://w7.pngwing.com/pngs/553/202/png-transparent-cloud-weather-snowflake-symbol-snowflake-weather-symbol-blue-cloud-heart-thumbnail.png')";
+      elweatherIcon.innerHTML = `<i class='bx bx-cloud-snow'></i>`
     }
   })
 })  
